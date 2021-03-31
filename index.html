@@ -1,27 +1,37 @@
 <html>
-    <head>
-        <title>Project 77</title>
-    </head>
-    <body>
-        <h1>Project 77 on the console</h1>
-        <p>Visual Studio is a coding progam that can support many different languages</p>
-        <p>Right click and inspect to see the console</p>
-        <script>
-            console.log("My First Console Project");
-            var first_name = "Miguel";
-            var last_name  = "Jarina";
-            var full_name = first_name.concat(last_name);
-            console.log(first_name);
-            console.log(last_name);
-            console.log(full_name);
-            var num_one = 18;
-            var num_two = 6; 
-            console.log(num_one);
-            console.log(num_two);
-            console.log(num_one + num_two); 
-            console.log(num_one - num_two);
-            console.log(num_one / num_two);
-            console.log(num_one * num_two);     
-            </script>
-    </body>
+
+<head>
+    <title>Family Book</title>
+    <style href="style.css"></style>
+</head>
+
+<body style="text-align: center;">
+    <h1>Family Book</h1>
+    <img id="image" src="https://images-na.ssl-images-amazon.com/images/I/91mwDyvpUcL.jpg" style="margin-top:50px; margin-bottom: 50px; width:200px;">
+    <h3 id="name" style="margin-bottom: 50px;">Names will come here</h3>
+    <button type="button" onclick="change()">Next</button>
+    <script>
+        var images = ["https://images-na.ssl-images-amazon.com/images/I/91mwDyvpUcL.jpg", "download.jpg", "mommy.jpg", "IMG_8734.jpg", "iya.jpg"];
+        var names = ["Family Book", "Lito Jarina", "Aileen Jarina", "Miguel Jarina", "Sophia Jarina"];
+        var i = 0;
+
+        function change() {
+            if (i == 5) {
+                i = 0;
+                document.getElementById("image").src = image[i];
+                document.getElementById("name").innerHTML = names[i];
+                console.log(images[i]);
+                console.log(names[i]);
+            } else {
+                document.getElementById("image").src = image[i];
+                document.getElementById("name").innerHTML = names[i];
+                console.log(images[i]);
+                console.log(names[i]);
+                i++;
+            }
+        }
+
+    </script>
+</body>
+
 </html>
